@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Money4You | Business Funding & Financial Solutions</title>
+
+    <meta name="description" content="Money4You provides business loan assistance, CGTMSE assistance, corporate funding, equity funding, startup funding and business compliance solutions.">
+    <meta name="keywords" content="Money4You, business loan, CGTMSE, corporate funding, equity funding, business finance, GST, income tax, business compliance">
+    <meta name="author" content="Money4You">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <meta property="og:title" content="Money4You | Business Funding & Financial Solutions">
+    <meta property="og:description" content="Business funding, CGTMSE assistance, corporate funding and financial solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://money4you.in">
+    <meta property="og:image" content="https://money4you.in/images/og-image.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --navy: #0b1f3a;
+            --navy2: #102b4e;
+            --gold: #c9a227;
+            --gold-light: #e5c75f;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #263238;
+            --muted: #667085;
+            --border: #e5e7eb;
+            --shadow: 0 15px 45px rgba(11,31,58,.10);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11,31,58,.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,.10);
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
+
+        .logo span { color: var(--gold-light); }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .25s;
+        }
+
+        nav a:hover { color: var(--gold-light); }
+
+        .nav-btn {
+            background: var(--gold);
+            color: var(--navy) !important;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .menu-btn {
+            display: none;
+            color: #fff;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(11,31,58,.98), rgba(11,31,58,.88)),
+                radial-gradient(circle at 80% 20%, rgba(201,162,39,.35), transparent 35%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(201,162,39,.22);
+            border-radius: 50%;
+            right: -160px;
+            top: 70px;
+            box-shadow: 0 0 0 60px rgba(201,162,39,.04),
+                        0 0 0 120px rgba(201,162,39,.03);
+        }
+
+        .hero-content {
+            max-width: 760px;
+            position: relative;
+            z-index: 2;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span { color: var(--gold-light); }
+
+        .hero p {
+            max-width: 680px;
+            font-size: 18px;
+            color: #dbe4ef;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 23px;
+            border-radius: 7px;
+            font-weight: 700;
+            border: 1px solid transparent;
+            transition: .25s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover { transform: translateY(-2px); background: var(--gold-light); }
+
+        .btn-outline {
+            border-color: rgba(255,255,255,.45);
+            color: #fff;
+        }
+
+        .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+        /* Stats */
+        .stats {
+            background: #fff;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 5;
+            margin-top: -55px;
+            border-radius: 14px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-item:last-child { border-right: 0; }
+
+        .stat-item h3 {
+            color: var(--navy);
+            font-size: 31px;
+            margin-bottom: 3px;
+        }
+
+        .stat-item p { color: var(--muted); font-size: 13px; }
+
+        /* Sections */
+        section { padding: 90px 0; }
+
+        .section-head {
+            max-width: 720px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-head .eyebrow { color: var(--gold); }
+
+        .section-head h2 {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 43px);
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .section-head p { color: var(--muted); }
+
+        /* About */
+        .about { background: var(--light); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: linear-gradient(145deg, var(--navy), var(--navy2));
+            min-height: 410px;
+            border-radius: 20px;
+            padding: 45px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-card:after {
+            content: "₹";
+            position: absolute;
+            right: 25px;
+            bottom: -50px;
+            font-size: 250px;
+            color: rgba(201,162,39,.10);
+            font-weight: 900;
+        }
+
+        .about-card i {
+            font-size: 42px;
+            color: var(--gold-light);
+            margin-bottom: 25px;
+        }
+
+        .about-card h3 { font-size: 30px; margin-bottom: 15px; }
+
+        .about-text h2 {
+            color: var(--navy);
+            font-size: 40px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .about-text p { color: var(--muted); margin-bottom: 18px; }
+
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .check-list i { color: var(--gold); }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 28px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: rgba(201,162,39,.45);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            background: rgba(201,162,39,.13);
+            color: var(--gold);
+            border-radius: 10px;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 { color: var(--navy); font-size: 18px; margin-bottom: 9px; }
+
+        .service-card p { color: var(--muted); font-size: 14px; }
+
+        /* Why us */
+        .why { background: var(--light); }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .why-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 13px;
+            border: 1px solid var(--border);
+        }
+
+        .why-card i { color: var(--gold); font-size: 28px; margin-bottom: 17px; }
+
+        .why-card h3 { color: var(--navy); margin-bottom: 8px; }
+
+        .why-card p { color: var(--muted); font-size: 14px; }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(120deg, var(--navy), #173c69);
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta h2 { font-size: clamp(30px, 4vw, 45px); margin-bottom: 14px; }
+
+        .cta p {
+            color: #d8e2ee;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta .hero-buttons { justify-content: center; }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 15px;
+            padding: 38px;
+        }
+
+        .contact-info h3 { font-size: 28px; margin-bottom: 12px; }
+
+        .contact-info > p { color: #cdd8e5; margin-bottom: 28px; }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            margin: 22px 0;
+            align-items: flex-start;
+        }
+
+        .contact-item i { color: var(--gold-light); margin-top: 4px; }
+
+        .contact-form {
+            padding: 38px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 { color: var(--navy); font-size: 28px; margin-bottom: 20px; }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .field { margin-bottom: 16px; }
+
+        .field.full { grid-column: 1 / -1; }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--navy);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d8dee7;
+            border-radius: 7px;
+            font: inherit;
+            outline: none;
+        }
+
+        input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+
+        textarea { min-height: 125px; resize: vertical; }
+
+        /* Footer */
+        footer {
+            background: #07172b;
+            color: #d8e1ec;
+            padding: 55px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        footer h3, footer h4 { color: #fff; margin-bottom: 15px; }
+
+        footer p, footer li { color: #aebdcd; font-size: 14px; }
+
+        footer ul { list-style: none; display: grid; gap: 8px; }
+
+        footer a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 35px;
+            padding-top: 18px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a4b6;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 28px;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 950px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item:nth-child(2) { border-right: 0; }
+            .stat-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+            .why-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 760px) {
+            .menu-btn { display: block; }
+            nav {
+                display: none;
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+                background: var(--navy);
+                padding: 20px 5%;
+            }
+            nav.active { display: block; }
+            nav ul { flex-direction: column; align-items: flex-start; gap: 17px; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .hero { min-height: 590px; }
+            .hero-content { padding: 60px 0; }
+        }
+
+        @media (max-width: 560px) {
+            section { padding: 65px 0; }
+            .services-grid, .stats-grid, .footer-grid { grid-template-columns: 1fr; }
+            .stat-item { border-right: 0; border-bottom: 1px solid var(--border); }
+            .stat-item:last-child { border-bottom: 0; }
+            .form-grid { grid-template-columns: 1fr; }
+            .field.full { grid-column: auto; }
+            .about-card { padding: 30px; min-height: 330px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-chart-line"></i>
+            MONEY<span>4YOU</span>
+        </a>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="nav-btn" href="#contact">Get Funding</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="eyebrow">Strategic Funding & Financial Solutions</div>
+            <h1>Build Your Business.<br><span>Fund Your Growth.</span></h1>
+            <p>
+                Money4You helps startups, MSMEs, businesses and corporates
+                access the right funding through business loans, working capital,
+                corporate finance, equity funding and structured financial solutions.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="btn btn-primary" href="#contact">
+                    <i class="fa-solid fa-paper-plane"></i> Get Funding Assistance
+                </a>
+                <a class="btn btn-outline" href="#services">
+                    Explore Solutions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Funding Solutions</p>
+        </div>
+        <div class="stat-item">
+            <h3>MSME</h3>
+            <p>Business Focus</p>
+        </div>
+        <div class="stat-item">
+            <h3>360°</h3>
+            <p>Financial Assistance</p>
+        </div>
+        <div class="stat-item">
+            <h3>1:1</h3>
+            <p>Personalized Guidance</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container about-grid">
+        <div class="about-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Funding That Fits Your Business</h3>
+            <p>
+                We bridge the gap between businesses and suitable lenders,
+                NBFCs, financial institutions and investors.
+            </p>
+        </div>
+
+        <div class="about-text">
+            <div class="eyebrow">About Money4You</div>
+            <h2>Your Growth. Our Financial Expertise.</h2>
+            <p>
+                Money4You is a funding and financial consultancy firm helping
+                businesses, startups, MSMEs and corporates identify and pursue
+                suitable funding opportunities.
+            </p>
+            <p>
+                From working capital and term loans to structured finance,
+                project funding and equity solutions, we aim to simplify the
+                funding journey with professional guidance and documentation support.
+            </p>
+
+            <ul class="check-list">
+                <li><i class="fa-solid fa-circle-check"></i> Multiple Funding Solutions</li>
+                <li><i class="fa-solid fa-circle-check"></i> Professional Documentation Support</li>
+                <li><i class="fa-solid fa-circle-check"></i> Business-Focused Financial Guidance</li>
+                <li><i class="fa-solid fa-circle-check"></i> Customized Funding Strategy</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow">Our Services</div>
+            <h2>Financial Solutions for Every Stage of Business</h2>
+            <p>
+                From day-to-day working capital to expansion and strategic funding,
+                Money4You offers a broad range of financial assistance.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3>Working Capital Loans</h3>
+                <p>Funding assistance to support operational cash-flow requirements.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                <h3>Term Loans</h3>
+                <p>Structured business finance for planned business requirements.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Unsecured Business Loans</h3>
+                <p>Explore unsecured funding options based on business eligibility.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                <h3>Machinery Loans</h3>
+                <p>Financial assistance for machinery and equipment acquisition.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+                <h3>MSME Loans</h3>
+                <p>Funding assistance designed around MSME business requirements.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Expansion Funding</h3>
+                <p>Capital solutions for business expansion and growth initiatives.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
+                <h3>Corporate & Structured Finance</h3>
+                <p>Customized funding support for larger and complex requirements.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Debt Syndication</h3>
+                <p>Assistance in arranging suitable debt funding structures.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-industry"></i></div>
+                <h3>Project Finance</h3>
+                <p>Funding assistance for eligible new and expansion projects.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-arrows-to-circle"></i></div>
+                <h3>Acquisition Funding</h3>
+                <p>Financial structuring assistance for qualifying acquisitions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Startup & Seed Funding</h3>
+                <p>Funding guidance for startups seeking early-stage capital.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                <h3>Angel & Venture Capital Support</h3>
+                <p>Assistance in preparing businesses for investor conversations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why" id="why-us">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow">Why Money4You</div>
+            <h2>More Than Funding. A Financial Partnership.</h2>
+            <p>
+                We focus on understanding your business requirement before
+                recommending a funding approach.
+            </p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <i class="fa-solid fa-network-wired"></i>
+                <h3>Funding Network</h3>
+                <p>Access to a broad ecosystem of lenders and funding channels, subject to eligibility.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <h3>Documentation Support</h3>
+                <p>Guidance on organizing financial and business documents for funding applications.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>Business Assessment</h3>
+                <p>Understand your funding requirement and explore suitable financial routes.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Professional Guidance</h3>
+                <p>Dedicated assistance throughout the funding process.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Customized Approach</h3>
+                <p>Funding strategy aligned with the nature and stage of your business.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h3>Long-Term Relationship</h3>
+                <p>We believe in building relationships that support sustainable business growth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Explore Your Funding Options?</h2>
+        <p>
+            Tell us about your business and funding requirement.
+            Our team can help you understand potential financial solutions.
+        </p>
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">Talk to Money4You</a>
+            <a class="btn btn-outline" href="tel:+919999999999">
+                <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow">Contact Us</div>
+            <h2>Let's Discuss Your Funding Requirement</h2>
+            <p>Share your basic details and our team can connect with you.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Money4You</h3>
+                <p>Build a Relationship, Not a Business.</p>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone</strong><br>
+                        +91 99999 99999
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong><br>
+                        info@money4you.in
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                        <strong>Website</strong><br>
+                        money4you.in
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="submitForm(event)">
+                <h3>Request a Callback</h3>
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="name">Full Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Mobile Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="Your mobile number" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Your email">
+                    </div>
+
+                    <div class="field">
+                        <label for="amount">Funding Requirement</label>
+                        <select id="amount" name="amount">
+                            <option value="">Select amount</option>
+                            <option>Below ₹25 Lakh</option>
+                            <option>₹25 Lakh – ₹1 Crore</option>
+                            <option>₹1 Crore – ₹5 Crore</option>
+                            <option>Above ₹5 Crore</option>
+                        </select>
+                    </div>
+
+                    <div class="field full">
+                        <label for="message">Requirement</label>
+                        <textarea id="message" name="message" placeholder="Tell us briefly about your business and funding requirement"></textarea>
+                    </div>
+
+                    <div class="field full">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h3>MONEY<span style="color:#e5c75f;">4YOU</span></h3>
+                <p>
+                    Funding and financial consultancy solutions for startups,
+                    MSMEs, businesses and corporates.
+                </p>
+                <p style="margin-top:12px;"><strong>Build a Relationship, Not a Business.</strong></p>
+            </div>
+
+            <div>
+                <h4>Funding</h4>
+                <ul>
+                    <li><a href="#services">Working Capital</a></li>
+                    <li><a href="#services">Business Loans</a></li>
+                    <li><a href="#services">MSME Loans</a></li>
+                    <li><a href="#services">Project Finance</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Growth Capital</h4>
+                <ul>
+                    <li><a href="#services">Expansion Funding</a></li>
+                    <li><a href="#services">Seed Funding</a></li>
+                    <li><a href="#services">Equity Funding</a></li>
+                    <li><a href="#services">Venture Capital Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#why-us">Why Money4You</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Request Callback</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Money4You. All Rights Reserved. | Financial solutions are subject to eligibility, documentation and lender/investor approval.
+        </div>
+    </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("mainNav").classList.toggle("active");
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        alert("Thank you! Your request has been received. Our team will contact you shortly.");
+    }
+
+    document.querySelectorAll("nav a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            document.getElementById("mainNav").classList.remove("active");
+        });
+    });
+</script>
+
+</body>
+</html>
